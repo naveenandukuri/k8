@@ -35,4 +35,4 @@ kubectl taint nodes --all node-role.kubernetes.io/control-plane- node-role.kuber
 
 #confirm that all pods are running or not
 watch kubectl get pods -n calico-system
-
+#wait for few seconds to initialize the calico containers
