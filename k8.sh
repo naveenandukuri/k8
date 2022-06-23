@@ -19,7 +19,7 @@ sudo apt-get update
 sudo apt-get install kubelet kubectl kubeadm -y
 
 # install the k8's networking model calico
-sudo kubeadm init --pod-network-cidr=192.168.0.0/16 --apiserver-advertise-address=`hostname -I | awk '{print $1}'`
+sudo kubeadm init --node-name master --pod-network-cidr=192.168.0.0/16 --apiserver-advertise-address=`hostname -I | awk '{print $1}'`
 
 #ownership for kubectl
 mkdir -p $HOME/.kube
